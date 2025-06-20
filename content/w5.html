@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,11 +142,12 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW1 << <a href='HW1.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3<br /><h1>HW2</h1>
-<p>HW2 (5%): <span style="background-color: #ffff00;">建立由 CAD 繪製零件組成的平面四連桿機構 Webots 模擬場景</span></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW2 - 學員學號</p>
-<p>檔案: <a href="./../downloads/hw2.7z" title="HW2">/downloads/hw2.7z</a></p>
-<br />HW1 << <a href='HW1.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3</div>
+    <div id="tipue_search_content">w4 << <a href='w4.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework<br /><h1>w5</h1>
+<p>在 Webots 中利用 圖形介面 (menu) 建立 四連桿機構 (four-bar linkage) 場景的步驟如下：</p>
+<ol>
+<li>建立新的 Webots 世界<br/>開啟 Webots，點選 File &gt; New World，建立一個新的場景。<br/>儲存 新的世界 (.wbt 檔案)。<br/>2. 添加環境<br/>在 Scene Tree (場景樹) 視窗中，右鍵 WorldInfo，選擇 Add &gt; Solid 來建立地面或其他環境元件。<br/>若需要平面地板，選擇 Add &gt; Shape &gt; Plane，並設定合適的尺寸。<br/>3. 建立四連桿機構<br/>(1) 新增連桿 (Links)<br/>每個連桿都是 Solid 元件，可從 Add &gt; Solid &gt; Shape &gt; Box/Cylinder 新增。<br/>設定：<br/>尺寸 (Size)<br/>質量 (Mass)<br/>位置 (Translation)<br/>(2) 新增鉸鏈關節 (Revolute Joint)<br/>在 Scene Tree 視窗，為每個關節選擇 Add &gt; Joint &gt; RevoluteJoint。<br/>關鍵設定<br/>Anchor (樞軸點位置)： 設定連桿之間的旋轉中心。<br/>Joint Parameters： 可設定旋轉角度範圍 (minPosition, maxPosition) 或馬達 (motor)。<br/>EndPoint： 設定此關節連接的目標連桿。<br/>(3) 組合完整機構<br/>確保所有連桿與關節的層級結構正確，例如：<br/>markdown<br/>複製<br/>編輯<br/>- Base (固定底座)<br/>- RevoluteJoint1<br/>- Link1<br/>- RevoluteJoint2<br/>- Link2<br/>- RevoluteJoint3<br/>- Link3<br/>- RevoluteJoint4<br/>- Link4<br/>4. 設定模擬參數<br/>Gravity (重力)：確認四連桿能正常運動，可在 WorldInfo &gt; gravity 中調整。<br/>Physics (物理屬性)：<br/>每個連桿應啟用 Physics 屬性，以確保物理模擬生效。<br/>調整 density (密度) 或 mass (質量) 來優化運動表現。<br/>5. 測試與調整<br/>運行模擬 (Run 按鈕) 確保機構正常運作。<br/>如有異常：<br/>確認 關節 (RevoluteJoint) 的 anchor 位置是否正確。<br/>檢查碰撞 是否影響運動。<br/>若有馬達，確認 PID 參數 是否適當。<br/>6. 進階功能 (可選)<br/>控制馬達：在 RevoluteJoint &gt; motor 啟用馬達，並設置 velocity (角速度) 及 torque (扭矩)。<br/>加入腳本控制：透過 Robot 控制器 (Controller) 以 Python / C / C++ 控制四連桿運動。<br/>動畫與視覺效果：可調整光源、材質與視角，使場景更具可視化效果。<br/>注意事項<br/>正確設置 RevoluteJoint 的 anchor，確保關節轉動中心對齊。<br/>連桿長度與關節位置對應，避免不符合機構運動規則的設計。<br/>調整物理屬性 (mass, inertia) 以確保運動穩定。<br/>避免連桿互相碰撞，可在 boundingObject 設定適當形狀，或啟用 contactMaterial 屬性調整摩擦力。<br/>測試不同參數 (如摩擦、重力) 以觀察影響。</li>
+</ol>
+<br />w4 << <a href='w4.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework</div>
         
     <!-- footer -->
       <div class="container">
